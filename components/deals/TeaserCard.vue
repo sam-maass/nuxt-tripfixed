@@ -3,21 +3,18 @@
     <div class="deal-card" :style="style">
       <div class="deal-card--content">
         <div class="deal-card--badge">
-          <span class="deal-card--old-price">{{deal.priceLimit}} {{deal.currency}}</span>
-          <br>
-          <span class="deal-card--price">{{deal.minPrice}} {{deal.currency}}</span>
+          <div class="deal-card--old-price">{{deal.priceLimit}} {{deal.currency}}</div>
+          <div class="deal-card--price">{{deal.minPrice}} {{deal.currency}}</div>
         </div>
         <div class="deal-card--name-section">
-          <span class="deal-card--title">{{deal.title}}</span>
-          <br>
-          <span class="deal-card--subtitle">{{deal.subtitle}}</span>
+          <div class="deal-card--title">{{deal.title}}</div>
+          <div class="deal-card--subtitle">{{deal.subtitle}}</div>
         </div>
         <div class="deal-card--bottom-section">
           <div class="deal-card--bottom-item">
             <div class="deal-card--bottom-item-title">Availability</div>
             <div class="deal-card--bottom-item-value">{{availableString}}</div>
           </div>
-
           <div class="deal-card--bottom-item">
             <div class="deal-card--bottom-item-title">updated</div>
             <div class="deal-card--bottom-item-value">{{timeAgo}}</div>
@@ -33,7 +30,6 @@
 .deal-card {
   width: 100%;
   max-width: 400px;
-  background-color: #fafafa;
   background-size: cover;
   min-height: 200px;
   color: $white;
@@ -61,8 +57,6 @@
   }
   &--name-section {
     margin-bottom: 8px;
-    justify-self: center;
-    align-self: center;
     text-align: center;
   }
   &--title {
@@ -71,7 +65,6 @@
     font-size: 24px;
     margin-bottom: 8px;
     letter-spacing: 0.1em;
-    line-height: 1px;
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
@@ -79,19 +72,13 @@
   }
   &--subtitle {
     font-size: 16px;
-    font-style: normal;
-    font-weight: normal;
+
     letter-spacing: 0.05em;
     line-height: 1.6em;
-    color: #fafafa;
   }
   &--bottom-section {
-    font-family: "Open Sans", sans-serif;
-    font-style: normal;
-    font-weight: normal;
     letter-spacing: 0.05em;
     line-height: 1.6em;
-    color: #fafafa;
     font-size: 0.8em;
     width: 100%;
     display: grid;
