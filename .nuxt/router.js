@@ -2,7 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import { interopDefault } from './utils'
 
-const _2b36ce2b = () => interopDefault(import('../pages/deals.vue' /* webpackChunkName: "pages/deals" */))
+const _b6466f24 = () => interopDefault(import('../pages/deals/index.vue' /* webpackChunkName: "pages/deals/index" */))
+const _b9b3b1b4 = () => interopDefault(import('../pages/deals/_slug.vue' /* webpackChunkName: "pages/deals/_slug" */))
 const _4a7ec7f6 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 Vue.use(Router)
@@ -81,8 +82,12 @@ export function createRouter() {
 
     routes: [{
       path: "/deals",
-      component: _2b36ce2b,
+      component: _b6466f24,
       name: "deals"
+    }, {
+      path: "/deals/:slug",
+      component: _b9b3b1b4,
+      name: "deals-slug"
     }, {
       path: "/",
       component: _4a7ec7f6,

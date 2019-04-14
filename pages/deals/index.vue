@@ -12,7 +12,7 @@
 <script lang="ts">
 import Vue from "vue";
 import axios from "axios";
-import TeaserCard from "../components/deals/TeaserCard.vue";
+import TeaserCard from "@/components/deals/TeaserCard.vue";
 export default {
   components: { TeaserCard },
   data: function() {
