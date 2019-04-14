@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>My blog navigation bar here</div>
+    <Navigation></Navigation>
     <nuxt/>
   </div>
 </template>
@@ -12,6 +12,7 @@
 
 
 <script lang="ts">
+import Navigation from "@/components/navigation/Navigation.vue";
 import Vue from "vue";
-export default {};
+export default { components: { Navigation } };
 </script>
