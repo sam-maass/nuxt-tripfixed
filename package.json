@@ -1,0 +1,16 @@
+{
+  "name": "nuxt-tripfixed",
+  "scripts": {
+    "dev": "nuxt"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "nuxt": "^2.6.1",
+    "ts-node": "^8.0.3"
+  },
+  "devDependencies": {
+    "@nuxt/typescript": "^2.6.1",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0"
+  }
+}
