@@ -1,13 +1,28 @@
 <template>
   <div class="deals">
     <h1>Deals</h1>
-    <ul>
+    <ul class="deals--list">
       <li :key="deal.slug" v-for="deal in deals">
         <TeaserCard v-bind:deal="deal"></TeaserCard>
       </li>
     </ul>
   </div>
 </template>
+
+<style lang="scss">
+.deals {
+  &--list {
+    max-width: 1400px;
+    margin: auto;
+    margin-top: 8px;
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(auto, 400px));
+    justify-content: center;
+  }
+}
+</style>
+
 
 <script lang="ts">
 import Vue from "vue";
