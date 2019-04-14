@@ -32,6 +32,7 @@
   max-width: 400px;
   background-size: cover;
   min-height: 200px;
+  border-radius: 4px;
   color: $white;
   &--content {
     height: 200px;
