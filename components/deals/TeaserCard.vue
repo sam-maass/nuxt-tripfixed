@@ -1,23 +1,23 @@
 <template>
   <nuxt-link :to="path">
     <div class="deal-card" :style="style">
-      <div class="deal-card--content">
-        <div class="deal-card--badge">
-          <div class="deal-card--old-price">{{deal.priceLimit}} {{deal.currency}}</div>
-          <div class="deal-card--price">{{deal.minPrice}} {{deal.currency}}</div>
+      <div class="deal-card__content">
+        <div class="deal-card__badge">
+          <div class="deal-card__old-price">{{deal.priceLimit}} {{deal.currency}}</div>
+          <div class="deal-card__price">{{deal.minPrice}} {{deal.currency}}</div>
         </div>
-        <div class="deal-card--name-section">
-          <div class="deal-card--title">{{deal.title}}</div>
-          <div class="deal-card--subtitle">{{deal.subtitle}}</div>
+        <div class="deal-card__name-section">
+          <div class="deal-card__title">{{deal.title}}</div>
+          <div class="deal-card__subtitle">{{deal.subtitle}}</div>
         </div>
-        <div class="deal-card--bottom-section">
-          <div class="deal-card--bottom-item">
-            <div class="deal-card--bottom-item-title">Availability</div>
-            <div class="deal-card--bottom-item-value">{{availableString}}</div>
+        <div class="deal-card__bottom-section">
+          <div class="deal-card__bottom-item">
+            <div class="deal-card__bottom-item-title">Availability</div>
+            <div class="deal-card__bottom-item-value">{{availableString}}</div>
           </div>
-          <div class="deal-card--bottom-item">
-            <div class="deal-card--bottom-item-title">updated</div>
-            <div class="deal-card--bottom-item-value">{{timeAgo}}</div>
+          <div class="deal-card__bottom-item">
+            <div class="deal-card__bottom-item-title">updated</div>
+            <div class="deal-card__bottom-item-value">{{timeAgo}}</div>
           </div>
         </div>
       </div>
@@ -34,12 +34,12 @@
   min-height: 200px;
   border-radius: 4px;
   color: $white;
-  &--content {
+  &__content {
     height: 200px;
     display: grid;
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
   }
-  &--badge {
+  &__badge {
     letter-spacing: 0.05em;
     line-height: 1.6em;
     font-size: 0.8em;
@@ -52,15 +52,15 @@
     align-self: start;
     text-align: center;
   }
-  &--old-price {
+  &__old-price {
     font-size: smaller;
     text-decoration: line-through;
   }
-  &--name-section {
+  &__name-section {
     margin-bottom: 8px;
     text-align: center;
   }
-  &--title {
+  &__title {
     font-family: "Comfortaa";
     font-style: normal;
     font-size: 24px;
@@ -71,13 +71,13 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  &--subtitle {
+  &__subtitle {
     font-size: 16px;
 
     letter-spacing: 0.05em;
     line-height: 1.6em;
   }
-  &--bottom-section {
+  &__bottom-section {
     letter-spacing: 0.05em;
     line-height: 1.6em;
     font-size: 0.8em;
@@ -86,10 +86,10 @@
     grid-template-columns: 1fr 1fr;
     padding-bottom: 8px;
   }
-  &--bottom-item {
+  &__bottom-item {
     text-align: center;
   }
-  &--bottom-item-value {
+  &__bottom-item-value {
     font-weight: bold;
   }
 }

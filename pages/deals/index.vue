@@ -1,6 +1,6 @@
 <template>
   <div class="deals">
-    <ul class="deals--list">
+    <ul class="deals__list">
       <li :key="deal.slug" v-for="deal in deals">
         <TeaserCard v-bind:deal="deal"></TeaserCard>
       </li>
@@ -11,7 +11,7 @@
 <style lang="scss">
 .deals {
   margin: 16px;
-  &--list {
+  &__list {
     max-width: 1400px;
     margin: auto;
     margin-top: 8px;
