@@ -1,7 +1,30 @@
 {
   "name": "nuxt-tripfixed",
   "scripts": {
-    "dev": "nuxt"
+    "dev": "nuxt",
+    "test:unit": "jest"
+  },
+  "jest": {
+    "globals": {
+      "vue-jest": {
+        "babelConfig": false
+      }
+    },
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/$1"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.vue$": "vue-jest",
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "testURL": "http://localhost/"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -13,7 +36,13 @@
   },
   "devDependencies": {
     "@nuxt/typescript": "^2.6.1",
+    "@types/jest": "^24.0.11",
+    "@vue/test-utils": "^1.0.0-beta.29",
+    "babel-core": "^6.26.3",
+    "jest": "^24.7.1",
     "node-sass": "^4.11.0",
-    "sass-loader": "^7.1.0"
+    "sass-loader": "^7.1.0",
+    "ts-jest": "^24.0.2",
+    "vue-jest": "^3.0.4"
   }
 }
