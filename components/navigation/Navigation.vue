@@ -4,15 +4,23 @@
       class="navigation__pane"
       v-bind:class="{'navigation__pane--active':isPaneOpen}"
       v-touch:swipe.left="togglePane"
-    >asf</div>
+    >
+      <h2>Navigation</h2>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+    </div>
     <div
       class="navigation__backdrop"
       v-bind:class="{'navigation__backdrop--active':isPaneOpen}"
       @click="togglePane"
     ></div>
     <nav class="navigation__bar">
-      <MenuIcon :size="32" @click="togglePane"/>asd
-      <LoginIcon :size="32"/>
+      <i @click="togglePane" class="material-icons">menu</i>
+      <span>Title</span>
+      <i class="material-icons">person</i>
     </nav>
   </div>
 </template>
@@ -66,15 +74,13 @@
 </style>
 
 
-<script>
-import MenuIcon from "vue-material-design-icons/Menu.vue";
-import LoginIcon from "vue-material-design-icons/AccountOutline.vue";
+<script lang="ts">
 import Vue from "vue";
 import Vue2TouchEvents from "vue2-touch-events";
 
 Vue.use(Vue2TouchEvents);
 
-export default {
+export default Vue.extend({
   data: function() {
     return {
       isPaneOpen: false
@@ -85,9 +91,6 @@ export default {
       this.isPaneOpen = !this.isPaneOpen;
     }
   },
-  components: {
-    MenuIcon,
-    LoginIcon
-  }
-};
+  components: {}
+});
 </script>

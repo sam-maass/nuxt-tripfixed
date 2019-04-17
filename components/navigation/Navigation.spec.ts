@@ -7,8 +7,8 @@ describe("/navigation/Navigation.vue", () => {
     expect(wrapper.exists()).toBe(true);
   });
 
-  test("contains TEST", () => {
+  test("contains navigation div", () => {
     const wrapper = shallowMount(Component);
-    expect(wrapper.html()).toContain("TEST");
+    expect(wrapper.contains(".navigation")).toBe(true);
   });
 });
