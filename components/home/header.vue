@@ -10,7 +10,7 @@
 <style lang="scss">
 @import "@/styles/colors.scss";
 .header {
-  background: $orange;
+  background: linear-gradient($orange, #fc4a1a);
   color: $white;
   display: grid;
   align-items: center;
@@ -31,11 +31,12 @@
     border: 1px solid $white;
     text-align: center;
     color: $white;
-    padding: 8px 16px;
+    padding: $padding/2 $padding;
     margin: 16px;
     border-radius: 12px;
-    background-color: $orange-light;
+    background-color: rgba(255, 255, 255, 0.2);
     font-size: 24px;
+    outline: none;
   }
 }
 </style>
