@@ -32,6 +32,7 @@
   }
   &__title-box {
     color: $white;
+    border-radius: 2px;
     border: 1px solid $white;
     padding: $padding;
     text-align: center;
