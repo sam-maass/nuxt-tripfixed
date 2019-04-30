@@ -34,8 +34,11 @@
   color: $white;
   &__static {
     display: grid;
-    grid-template-columns: 7fr 5fr;
     justify-items: center;
+    grid-template-columns: 100%;
+    @media (min-width: 1000px) {
+      grid-template-columns: 7fr 5fr;
+    }
   }
   &__content {
     text-align: center;
