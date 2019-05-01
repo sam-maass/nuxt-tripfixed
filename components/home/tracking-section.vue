@@ -20,21 +20,24 @@
 .tracking-section {
   padding: $padding * 8 $padding;
   min-height: 200px;
-  background: #2c3e50; /* fallback for old browsers */
+
+  background: #06beb6; /* fallback for old browsers */
   background: -webkit-linear-gradient(
-    to top,
-    #4ca1af,
-    #2c3e50
+    to bottom,
+    #48b1bf,
+    #06beb6
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
-    to top,
-    #4ca1af,
-    #2c3e50
+    to bottom,
+    #48b1bf,
+    #06beb6
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: $white;
   &__static {
     display: grid;
     justify-items: center;
+    max-width: 1024px;
+    margin: auto;
     grid-template-columns: 100%;
     @media (min-width: 1000px) {
       grid-template-columns: 7fr 5fr;
