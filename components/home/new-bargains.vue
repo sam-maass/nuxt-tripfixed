@@ -25,13 +25,13 @@
 @import "@/styles/colors.scss";
 .new-bargains {
   grid-column: 1/-1;
-  padding: $padding * 4 0;
+  padding: $padding * 4 0 0 0;
   justify-self: center;
   justify-content: center;
   text-align: center;
   &__list {
-    padding: $padding * 2 0;
-    height: 250px;
+    padding: $padding * 2 0 0 0;
+    height: 200px;
   }
   &__airline-column {
     @media (max-width: 1000px) {

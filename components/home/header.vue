@@ -10,20 +10,33 @@
 <style lang="scss">
 @import "@/styles/colors.scss";
 .header {
-  background: linear-gradient($orange, #fc4a1a);
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   color: $white;
   display: grid;
   align-items: center;
   justify-items: center;
   text-align: center;
-  padding: $padding * 4 $padding * 2;
+  padding: $padding * 8 $padding;
   &__title {
     font-family: "Comfortaa", sans-serif;
     padding-bottom: $padding/2;
     font-size: 24px;
   }
   &__subtitle {
-    font-family: "Comfortaa", sans-serif;
+    /* font-family: "Comfortaa", sans-serif; */
     padding-bottom: $padding;
     font-size: 18px;
   }

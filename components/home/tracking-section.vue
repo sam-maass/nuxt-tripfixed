@@ -18,7 +18,7 @@
 <style lang="scss" scoped>
 @import "@/styles/colors.scss";
 .tracking-section {
-  padding: $padding * 2;
+  padding: $padding * 8 $padding;
   min-height: 200px;
   background: #2c3e50; /* fallback for old browsers */
   background: -webkit-linear-gradient(

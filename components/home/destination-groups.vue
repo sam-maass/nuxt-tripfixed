@@ -29,7 +29,7 @@
   display: grid;
   justify-items: center;
   align-items: center;
-  padding: $padding * 2;
+  padding: $padding * 8 $padding;
   text-align: center;
   &__explanation {
     max-width: 70ch;
