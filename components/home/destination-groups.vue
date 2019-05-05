@@ -1,9 +1,9 @@
 <template>
   <div class="destinations">
-    <h2 class="destinations__title">Favorite Vacation Destinations</h2>
+    <h2 class="destinations__title">Explore Trip Destinations</h2>
     <p
       class="destinations__explanation"
-    >Find your favorite destinations all in one place. Whether you are planning a city trip or a beach holiday. We check thousands of flights every day to keep you up-to-date.</p>
+    >Not sure where to go yet? Choose from our trip categories and find out where flights are cheapest. Still uncertain? Simply add several destinations to your wish list and you will always keep an eye on the best fares to your travel destinations. Set your travel budget and the dates you can travel on and the vacation planning will be almost automatic.</p>
     <ul class="destinations__list">
       <li>
         <DestinationCard

@@ -1,6 +1,6 @@
 <template>
   <div class="new-bargains">
-    <h2 @click="addNewBargain">Bargains we found recently</h2>
+    <h2 @click="addNewBargain">Start with these fresh bargains</h2>
     <ul class="new-bargains__list">
       <li
         v-for="bargain in newBargains"
@@ -18,6 +18,7 @@
         <span class="new-bargains__price-column">from {{ bargain.price }} {{ bargain.currency }}</span>
       </li>
     </ul>
+    <div class="new-bargains__button">More Deals</div>
   </div>
 </template>
 
@@ -29,6 +30,20 @@
   justify-self: center;
   justify-content: center;
   text-align: center;
+  &__button {
+    display: inline;
+    padding: $padding;
+    margin: $padding * 2;
+    border: 1px solid $white;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover {
+      transition: background-color 300ms;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
   &__list {
     padding: $padding * 2 0 0 0;
     height: 200px;
