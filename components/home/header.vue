@@ -2,10 +2,12 @@
   <div class="header">
     <nav class="header__nav">
       <div class="header__icon"></div>
-      <a href="https://tripfixed.com/login" class="header__button">Deals</a>
-      <a href="https://tripfixed.com/login" class="header__button">
-        <i class="material-icons">person</i> Login
-      </a>
+      <div class="header__nav-buttons">
+        <a href="https://tripfixed.com/deals" class="header__button">Deals</a>
+        <a href="https://tripfixed.com/login" class="header__button">
+          <i class="material-icons">person</i> Login
+        </a>
+      </div>
     </nav>
 
     <h1 class="header__title">Create Your Travel Wishlist</h1>
@@ -40,6 +42,7 @@
 
   &__cta {
     margin: $padding * 2;
+    margin-top: $padding * 3;
     padding: $padding;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.5);
@@ -51,6 +54,15 @@
       background: rgba(255, 255, 255, 0.15);
       border: 1px solid rgba(255, 255, 255, 0.8);
     }
+  }
+
+  &__nav-buttons {
+    grid-area: login;
+    display: grid;
+    grid-auto-flow: column;
+    justify-self: right;
+    align-items: center;
+    gap: $padding;
   }
 
   &__nav {
@@ -68,7 +80,6 @@
   }
 
   &__button {
-    grid-area: login;
     display: grid;
     grid-auto-flow: column;
     gap: $padding/2;
@@ -76,9 +87,7 @@
     justify-self: right;
     padding: $padding/2;
     cursor: pointer;
-    font-weight: bold;
     border-radius: 4px;
-    margin: $padding;
     &:hover {
       transition: background-color 300ms;
       background: rgba(255, 255, 255, 0.3);
