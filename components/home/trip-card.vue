@@ -24,14 +24,16 @@
         <span class="trip-card__price">
           {{destination.price}} EUR
           <br>
-          <small>{{ priceRating(destination.trend, destination.price)}}</small>
+          <small>&Oslash; {{destination.averagePrice}} EUR</small>
         </span>
         <span class="trip-card__price-trend">
           <span>{{destination.trend}}%</span>
           <i v-if="destination.trend < -3" class="material-icons">trending_down</i>
           <i v-else-if="destination.trend > 3" class="material-icons">trending_up</i>
           <i v-else class="material-icons">trending_flat</i>
-          <small class="trip-card__price-trend-small">&Oslash; {{destination.averagePrice}} EUR</small>
+          <small
+            class="trip-card__price-trend-small"
+          >{{ priceRating(destination.trend, destination.price)}}</small>
         </span>
       </li>
     </ul>
@@ -45,16 +47,22 @@
   background: $white;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
   border-radius: 8px;
-  width: 400px;
+  width: 600px;
+  max-width: 90vw;
+  box-sizing: border-box;
   margin: $padding * 2 0;
   color: #444;
+  padding: $padding $padding * 2;
   display: grid;
-  padding: $padding * 2 $padding * 4;
+
   gap: $padding;
   grid-template-areas:
     "title title title"
     "budget dates dates"
     "main main main";
+  @media (min-width: 1024px) {
+    padding: $padding * 2 $padding * 4;
+  }
   &__title {
     grid-area: title;
     font-weight: bold;
@@ -84,17 +92,20 @@
   &__destinations {
     border-top: 1px solid #ddd;
 
-    padding-top: $padding;
+    padding-top: $padding * 1.5;
     grid-area: main;
     display: grid;
     gap: $padding;
   }
   &__destination {
     display: grid;
-    grid-template-columns: 24px 1fr 100px 100px;
+    grid-template-columns:
+      24px minmax(max-content, 1fr) minmax(max-content, 1fr)
+      minmax(max-content, 1fr);
     gap: $padding;
     text-align: left;
     align-items: center;
+    align-content: center;
     &--cheap {
       color: green;
       font-weight: bold;
@@ -128,7 +139,7 @@ import Vue from "vue";
 export default Vue.extend({
   methods: {
     getRowColorClass(trend, price) {
-      if (price > this.budget) return "trip-card__destination--inactive";
+      if (price > this.$props.budget) return "trip-card__destination--inactive";
       if (trend > 3) {
         return "trip-card__destination--expensive";
       }
@@ -138,7 +149,7 @@ export default Vue.extend({
       return "";
     },
     priceRating(trend, price) {
-      if (price > this.budget) return "too expensive";
+      if (price > this.$props.budget) return "too expensive";
       if (trend > 3) {
         return "bad price";
       }
@@ -148,18 +159,11 @@ export default Vue.extend({
       return "normal price";
     }
   },
-  data: function() {
-    return {
-      title: "Summer Weekend Trip",
-      dates: "May-Aug 2019",
-      budget: 120,
-      destinations: [
-        { name: "Barcelona", price: 40, trend: -12, averagePrice: 52 },
-        { name: "Munich", price: 84, trend: 14, averagePrice: 52 },
-        { name: "Rome", price: 94, trend: -2, averagePrice: 52 },
-        { name: "Venice", price: 123, trend: 2, averagePrice: 52 }
-      ]
-    };
+  props: {
+    title: String,
+    dates: String,
+    budget: Number,
+    destinations: Array
   }
 });
 </script>
