@@ -2,6 +2,9 @@
   "name": "nuxt-tripfixed",
   "scripts": {
     "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
     "test:unit": "jest"
   },
   "jest": {
