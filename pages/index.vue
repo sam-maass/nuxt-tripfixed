@@ -1,18 +1,19 @@
 <template>
   <div class="home">
-    <h1>Hello world!{{test}}</h1>
-    <nuxt-link to="/deals">Deals</nuxt-link>
-    <a href="/deals">Deals</a>
+    <Header/>
+    <DestinationGroups/>
+    <TrackingSection/>
+    <Footer/>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
+import Header from "../components/home/header.vue";
+import Footer from "../components/home/footer.vue";
+import DestinationGroups from "../components/home/destination-groups.vue";
+import TrackingSection from "../components/home/tracking-section.vue";
 export default Vue.extend({
-  data: function() {
-    return {
-      test: "Sam"
-    };
-  }
+  components: { Header, DestinationGroups, TrackingSection, Footer }
 });
 </script>
