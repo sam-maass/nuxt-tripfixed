@@ -29,17 +29,17 @@
   "dependencies": {
     "axios": "^0.18.0",
     "moment": "^2.24.0",
-    "nuxt": "^2.6.1",
-    "ts-node": "^8.0.3",
+    "nuxt": "^2.6.3",
+    "ts-node": "^8.1.0",
     "vue2-touch-events": "^2.0.0"
   },
   "devDependencies": {
-    "@nuxt/typescript": "^2.6.1",
-    "@types/jest": "^24.0.11",
+    "@nuxt/typescript": "^2.6.3",
+    "@types/jest": "^24.0.12",
     "@vue/test-utils": "^1.0.0-beta.29",
     "babel-core": "^6.26.3",
-    "jest": "^24.7.1",
-    "node-sass": "^4.11.0",
+    "jest": "^24.8.0",
+    "node-sass": "^4.12.0",
     "sass-loader": "^7.1.0",
     "ts-jest": "^24.0.2",
     "vue-jest": "^3.0.4"
