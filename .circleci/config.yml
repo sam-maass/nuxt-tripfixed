@@ -55,7 +55,7 @@ jobs:
           docker_layer_caching: true
       - run: docker build -t nuxt-tripfixed .
       - run: docker save -o nuxt-tripfixed_image nuxt-tripfixed
-      - run: scp -o StrictHostKeyChecking=no nuxt-tripfixed_image root@159.69.150.31:~/flystr_image
+      - run: scp -o StrictHostKeyChecking=no nuxt-tripfixed_image root@159.69.150.31:~/nuxt-tripfixed_image
       - run: ssh -o StrictHostKeyChecking=no  root@159.69.150.31 -- docker load -i nuxt-tripfixed_image
       - run: ssh -o StrictHostKeyChecking=no  root@159.69.150.31 -- docker-compose up -d
       - run: ssh -o StrictHostKeyChecking=no  root@159.69.150.31 -- docker image prune -af
