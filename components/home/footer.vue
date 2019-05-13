@@ -69,7 +69,7 @@
   }
 
   &__list-item {
-    color: lighten($gray, $lighten2);
+    color: $lightGray;
     padding-left: $padding/2;
     &:hover {
       color: $gray;
@@ -77,7 +77,7 @@
   }
   &__copyright {
     grid-column: 1 / -1;
-    color: lighten($gray, $lighten2);
+    color: $lightGray;
   }
 }
 </style>

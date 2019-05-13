@@ -3,9 +3,12 @@
     <div class="tracking-section__static">
       <div class="tracking-section__content">
         <h2 class="tracking-section__title">Get updates for tracked destinations</h2>
-        <p
-          class="tracking-section__text"
-        >Create your own holiday bucketlist and then fly when it's the cheapest. We search the internet several times a day for the lowest-price flights and let you know when it's the right time. Simply add destinations to your wishlist, select time periods that suit you and you will automatically receive a notification when the flights are the most affordable. Holiday planning simply couldn't be easier.</p>
+        <p class="tracking-section__text">
+          Create your own
+          <b>holiday bucketlist</b> and then fly when the prices are low. We search the internet several times a day for the lowest-price flights and
+          <b>let you know when it's the right time to book your trip</b>. Simply add destinations to your wishlist, select time periods that suit you and you will automatically receive a notification when the flights are the most affordable.
+          <b>Holiday planning simply couldn't be easier.</b>
+        </p>
       </div>
       <div class="tracking-section__image">
         <img src="@/assets/pricing-card.svg">

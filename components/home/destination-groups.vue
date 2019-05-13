@@ -3,21 +3,26 @@
     <h2 class="destinations__title">Explore Trip Destinations</h2>
     <p
       class="destinations__explanation"
-    >Not sure where to go yet? Choose from our trip categories and find out where flights are cheapest. Still uncertain? Simply add several destinations to your wish list and you will always keep an eye on the best fares to your travel destinations. Set your travel budget and the dates you can travel on and the vacation planning will be almost automatic.</p>
+    >Not sure yet where to fly? Choose from our trip categories and find out where flights are cheapest. Still uncertain? Simply add several destinations to your wish list and we will keep an eye on the best fares to your travel destinations. Set your travel budget and the dates you want to travel, and your vacation planning will be almost automatic.</p>
     <ul class="destinations__list">
       <li>
-        <DestinationCard
-          image="CUN"
-          title="Beach Breaks"
-          subtitle="Endless Shorebreak from 399 EUR"
-        />
+        <a href="https://www.tripfixed.com/deals">
+          <DestinationCard
+            image="CUN"
+            title="Beach Breaks"
+            subtitle="Endless Shorebreak from 399 EUR"
+          />
+        </a>
       </li>
+
       <li>
-        <DestinationCard
-          image="YYZ"
-          title="City Trips"
-          subtitle="Stunning Architecture from 69 EUR"
-        />
+        <a href="https://www.tripfixed.com/deals">
+          <DestinationCard
+            image="YYZ"
+            title="City Trips"
+            subtitle="Stunning Architecture from 69 EUR"
+          />
+        </a>
       </li>
     </ul>
   </div>
