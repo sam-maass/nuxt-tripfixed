@@ -18,7 +18,7 @@
         <span class="new-bargains__price-column">from {{ bargain.price }} {{ bargain.currency }}</span>
       </li>
     </ul>
-    <div class="button--ghost">More Deals</div>
+    <div class="button button--ghost">More Deals</div>
   </div>
 </template>
 

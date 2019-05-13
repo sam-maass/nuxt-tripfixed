@@ -38,7 +38,7 @@
       </div>
 
       <a href="https://www.tripfixed.com/deals">
-        <div class="button--ghost">Plan your next trip</div>
+        <div class="button button--ghost">Plan your next trip</div>
       </a>
     </div>
   </div>
