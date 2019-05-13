@@ -18,32 +18,20 @@
         <span class="new-bargains__price-column">from {{ bargain.price }} {{ bargain.currency }}</span>
       </li>
     </ul>
-    <div class="new-bargains__button">More Deals</div>
+    <div class="button--ghost">More Deals</div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 @import "@/styles/colors.scss";
+@import "@/styles/shared/button.scss";
+
 .new-bargains {
   grid-column: 1/-1;
   padding: $padding * 4 0 0 0;
   justify-self: center;
   justify-content: center;
   text-align: center;
-  &__button {
-    display: inline;
-    padding: $padding;
-    margin: $padding * 2;
-    border: 1px solid $white;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-    font-weight: bold;
-    cursor: pointer;
-    &:hover {
-      transition: background-color 300ms;
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-  }
   &__list {
     padding: $padding * 2 0 0 0;
     height: 200px;

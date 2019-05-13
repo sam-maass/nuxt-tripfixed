@@ -38,7 +38,7 @@
       </div>
 
       <a href="https://www.tripfixed.com/deals">
-        <div class="header__cta">Plan your next trip</div>
+        <div class="button--ghost">Plan your next trip</div>
       </a>
     </div>
   </div>
@@ -46,6 +46,7 @@
 
 <style lang="scss">
 @import "@/styles/colors.scss";
+@import "@/styles/shared/button.scss";
 .header {
   background: #23292b; /* fallback for old browsers */
   background-color: -webkit-linear-gradient(
@@ -67,23 +68,6 @@
 
   padding: 132px 16px 64px;
 
-  &__cta {
-    margin: $padding * 2;
-    margin-top: $padding * 3;
-    padding: $padding;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    font-size: 16px;
-    text-transform: capitalize;
-    &:hover {
-      transition: all 300ms;
-      color: rgba(255, 255, 255, 1);
-      background: rgba(255, 255, 255, 0.15);
-      border: 1px solid rgba(255, 255, 255, 0.8);
-    }
-  }
   &__claim {
     padding-bottom: $padding;
     opacity: 1;
