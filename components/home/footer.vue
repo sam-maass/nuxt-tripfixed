@@ -69,15 +69,15 @@
   }
 
   &__list-item {
-    color: $gray;
+    color: lighten($gray, $lighten2);
     padding-left: $padding/2;
     &:hover {
-      color: #445;
+      color: $gray;
     }
   }
   &__copyright {
     grid-column: 1 / -1;
-    color: $gray;
+    color: lighten($gray, $lighten2);
   }
 }
 </style>
