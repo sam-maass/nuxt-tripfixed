@@ -18,10 +18,10 @@
         class="header__trip-card"
         :class="{'header__trip-card--fade': isTripCardChanging}"
       />
-      <div
-        class="header__claim"
-        :class="{'header__claim--fade': isTripCardChanging}"
-      >{{exampleTrips[currentExampleTripIndex].claim}}</div>
+      <div class="header__claim" :class="{'header__claim--fade': isTripCardChanging}">
+        <b>{{exampleTrips[currentExampleTripIndex].claimTitle}}:</b>
+        {{exampleTrips[currentExampleTripIndex].claim}}
+      </div>
       <div class="progress-circles">
         <div
           class="progress-circles__dot"
@@ -224,10 +224,11 @@ export default Vue.extend({
       currentExampleTripIndex: 0,
       exampleTrips: [
         {
-          title: "Summer Weekend Trip",
+          title: "🕶 Summer Weekend Trip",
           dates: "May-Aug 2019",
           budget: 120,
-          claim: "Lists: Track flight prices to all your destinations",
+          claimTitle: "Lists",
+          claim: "Track flight prices to all your destinations",
           destinations: [
             { name: "Barcelona", price: 40, trend: -12, averagePrice: 52 },
             { name: "Munich", price: 84, trend: 14, averagePrice: 52 },
@@ -239,7 +240,8 @@ export default Vue.extend({
           title: "🏖 Asia Trip",
           dates: "Jan-Dec 2019",
           budget: 500,
-          claim: "Price History: We show you what a reasonable price is",
+          claimTitle: "Price History",
+          claim: "We show you what a reasonable price is",
 
           destinations: [
             { name: "Bali", price: 491, trend: -12, averagePrice: 590 },
@@ -249,11 +251,11 @@ export default Vue.extend({
           ]
         },
         {
-          title: "US Trip",
+          title: "🗽 US Trip",
           dates: "September 2019",
-          budget: 120,
-          claim:
-            "Notifications: Never miss when flights to your destinations goes on sale",
+          budget: 300,
+          claimTitle: "Notifications",
+          claim: "Never miss when flights to your destinations goes on sale",
 
           destinations: [
             { name: "New York", price: 240, trend: -12, averagePrice: 280 },

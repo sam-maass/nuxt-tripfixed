@@ -18,7 +18,9 @@
         <span class="new-bargains__price-column">from {{ bargain.price }} {{ bargain.currency }}</span>
       </li>
     </ul>
-    <div class="button button--ghost">More Deals</div>
+    <a href="https://www.tripfixed.com/deals">
+      <div class="button button--ghost">More Deals</div>
+    </a>
   </div>
 </template>
 

@@ -89,10 +89,10 @@ export default Vue.extend({
   data: function() {
     return {
       countryLinks: [
-        { name: "Austria", slug: "from-Austria" },
-        { name: "Austria", slug: "from-Austria" },
-        { name: "Austria", slug: "from-Austria" },
-        { name: "Austria", slug: "from-Austria" }
+        { name: "Austria", slug: "from-austria" },
+        { name: "Germany", slug: "from-germany" },
+        { name: "Netherlands", slug: "from-netherlands" },
+        { name: "Switzerland", slug: "from-switzerland" }
       ]
     };
   }

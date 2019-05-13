@@ -1,9 +1,11 @@
 <template>
   <div class="destinations">
     <h2 class="destinations__title">Explore Trip Destinations</h2>
-    <p
-      class="destinations__explanation"
-    >Not sure yet where to fly? Choose from our trip categories and find out where flights are cheapest. Still uncertain? Simply add several destinations to your wish list and we will keep an eye on the best fares to your travel destinations. Set your travel budget and the dates you want to travel, and your vacation planning will be almost automatic.</p>
+    <p class="destinations__explanation">
+      Not sure yet where to fly? Choose from our trip categories and find out where flights are cheapest. Still uncertain? Simply add several destinations to your wish list and
+      <b>we will keep an eye on the best fares</b> to your travel destinations.
+      <b>Set your travel budget and the dates you want to travel, and your vacation planning will be almost automatic.</b>
+    </p>
     <ul class="destinations__list">
       <li>
         <a href="https://www.tripfixed.com/deals">
