@@ -16,6 +16,18 @@ import DestinationGroups from "../components/home/destination-groups.vue";
 import TrackingSection from "../components/home/tracking-section.vue";
 import SignupSection from "../components/home/signup-section.vue";
 export default Vue.extend({
+  head() {
+    return {
+      title: "Tripfixed",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Plan Trips - Track Flight Prices - Find Travel Bargains"
+        }
+      ]
+    };
+  },
   components: {
     Header,
     DestinationGroups,
