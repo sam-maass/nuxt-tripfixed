@@ -6,7 +6,9 @@
         class="signup-section__text"
       >Never again miss a bargain flight. With tripfixed you get a steady flow of flight deals and get notified as soon as we find new oportunities. Our algorithms make sure that we crawl the internet multiple times a day and our mission is to make affordable travel plans as easy as possible. Join us on our journey to and sign up for free flight price updates.</p>
     </div>
-    <div class="button button--primary">Sign up today</div>
+    <a href="https://www.tripfixed.com/login">
+      <div class="button button--primary">Sign up today</div>
+    </a>
   </div>
 </template>
 
