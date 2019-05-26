@@ -20,7 +20,15 @@ const config: NuxtConfiguration = {
         href: "https://fonts.googleapis.com/icon?family=Material+Icons"
       }
     ]
-  }
+  },
+  modules: [
+    [
+      "@nuxtjs/google-analytics",
+      {
+        id: "UA-93772101-1"
+      }
+    ]
+  ]
   // Type or Press `Ctrl + Space` for autocompletion
 };
 
