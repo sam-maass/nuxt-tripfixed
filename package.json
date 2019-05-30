@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "NUXT_PORT=3001 nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "start": "NUXT_PORT=3000 nuxt start",
     "generate": "nuxt generate",
     "test:unit": "jest"
   },
