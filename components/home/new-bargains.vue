@@ -124,7 +124,12 @@ import { setTimeout } from "timers";
 export default Vue.extend({
   methods: {
     addNewBargain: function() {
-      let newBargain = { ...this.newBargains[this.newBargains.length - 1] };
+      let newBargain = { ...this.hiddenBargains[0] };
+      const hiddenBargains = this.hiddenBargains
+        .slice(1)
+        .concat(this.newBargains.slice(-1));
+
+      this.hiddenBargains = hiddenBargains;
       let nextBargains = [newBargain, ...this.newBargains];
       nextBargains[nextBargains.length - 1].state = "fadeOut";
       nextBargains[0].state = "fadeIn";
@@ -147,10 +152,34 @@ export default Vue.extend({
   data: function() {
     return {
       isAddingListItem: false,
+      hiddenBargains: [
+        {
+          from: "Dublin",
+          to: "Miami",
+          airline: "Air France",
+          price: "265",
+          currency: "EUR",
+          state: ""
+        },
+        {
+          from: "Rome",
+          to: "Auckland",
+          airline: "China Southern",
+          price: "601",
+          currency: "EUR"
+        },
+        {
+          from: "Geneva",
+          to: "Bangkok",
+          airline: "KLM",
+          price: "364",
+          currency: "EUR"
+        }
+      ],
       newBargains: [
         {
           from: "Frankfurt",
-          to: "Hongkong",
+          to: "Hong Kong",
           airline: "Lufthansa",
           price: "344",
           currency: "EUR",
@@ -161,7 +190,8 @@ export default Vue.extend({
           to: "Chicago",
           airline: "American",
           price: "249",
-          currency: "EUR"
+          currency: "EUR",
+          state: ""
         },
         {
           from: "Berlin",
@@ -171,10 +201,10 @@ export default Vue.extend({
           currency: "EUR"
         },
         {
-          from: "Frankfurt",
-          to: "Hongkong",
-          airline: "Lufthansa",
-          price: "344",
+          from: "Riga",
+          to: "Iceland",
+          airline: "Wizz Air",
+          price: "80",
           currency: "EUR"
         }
       ]
