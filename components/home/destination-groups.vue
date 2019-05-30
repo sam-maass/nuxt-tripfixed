@@ -8,7 +8,7 @@
     </p>
     <ul class="destinations__list">
       <li>
-        <a href="https://www.tripfixed.com/deals">
+        <a :href="appUrl+'/deals'">
           <DestinationCard
             image="CUN"
             title="Beach Breaks"
@@ -18,7 +18,7 @@
       </li>
 
       <li>
-        <a href="https://www.tripfixed.com/deals">
+        <a :href="appUrl+'/deals'">
           <DestinationCard
             image="YYZ"
             title="City Trips"
@@ -59,9 +59,15 @@
 </style>
 
 <script lang="ts">
+import { appUrl } from "@/config";
 import Vue from "vue";
 import DestinationCard from "@/components/home/destination-card.vue";
 export default Vue.extend({
-  components: { DestinationCard }
+  components: { DestinationCard },
+  data() {
+    return {
+      appUrl
+    };
+  }
 });
 </script>

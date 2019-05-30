@@ -7,7 +7,7 @@
         <b>our mission is to make affordable travel plans as easy as possible</b>. Join us on our journey to and sign up for free flight price updates.
       </p>
     </div>
-    <a href="https://www.tripfixed.com/login">
+    <a :href="appUrl+'/login'">
       <div class="button button--primary">Sign up today</div>
     </a>
   </div>
@@ -34,5 +34,12 @@
 
 <script lang="ts">
 import Vue from "vue";
-export default Vue.extend({});
+import { appUrl } from "@/config";
+export default Vue.extend({
+  data() {
+    return {
+      appUrl
+    };
+  }
+});
 </script>

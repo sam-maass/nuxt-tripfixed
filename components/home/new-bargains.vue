@@ -18,7 +18,7 @@
         <span class="new-bargains__price-column">from {{ bargain.price }} {{ bargain.currency }}</span>
       </li>
     </ul>
-    <a href="https://www.tripfixed.com/deals">
+    <a :href="appUrl+'/deals'">
       <div class="button button--ghost">More Deals</div>
     </a>
   </div>
@@ -120,7 +120,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { setTimeout } from "timers";
+import { appUrl } from "@/config";
 export default Vue.extend({
   methods: {
     addNewBargain: function() {
@@ -151,6 +151,7 @@ export default Vue.extend({
 
   data: function() {
     return {
+      appUrl,
       isAddingListItem: false,
       hiddenBargains: [
         {

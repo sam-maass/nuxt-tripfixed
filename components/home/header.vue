@@ -3,8 +3,8 @@
     <nav class="header__nav">
       <div class="header__icon"></div>
       <div class="header__nav-buttons">
-        <a href="https://tripfixed.com/deals" class="header__button">Deals</a>
-        <a href="https://tripfixed.com/login" class="header__button">
+        <a :href="appUrl+'/deals'" class="header__button">Deals</a>
+        <a :href="appUrl+'/login'" class="header__button">
           <i class="material-icons">person</i> Login
         </a>
       </div>
@@ -37,7 +37,7 @@
         >&#11044;</div>
       </div>
 
-      <a href="https://www.tripfixed.com/deals">
+      <a :href="appUrl+'/deals'>
         <div class="button button--ghost">Plan your next trip</div>
       </a>
     </div>
@@ -200,6 +200,7 @@
 
 <script lang="ts">
 import Vue from "vue";
+import { appUrl } from "@/config";
 import TripCard from "@/components/home/trip-card.vue";
 import { setInterval } from "timers";
 export default Vue.extend({
@@ -220,6 +221,7 @@ export default Vue.extend({
   },
   data: function() {
     return {
+      appUrl,
       isTripCardChanging: false,
       currentExampleTripIndex: 0,
       exampleTrips: [

@@ -28,8 +28,7 @@
 import Vue from "vue";
 import axios from "axios";
 import TeaserCard from "@/components/deals/TeaserCard.vue";
-import { config } from "@/config.ts";
-const env = process.env.NODE_ENV || "development";
+import { apiUrl } from "@/config.ts";
 export default {
   components: { TeaserCard },
   data: function() {
@@ -38,7 +37,7 @@ export default {
     };
   },
   asyncData({ params }) {
-    return axios.get(`${config.apiServer[env]}/deals`).then(res => {
+    return axios.get(`${apiUrl}/deals`).then(res => {
       return { deals: res.data };
     });
   }
