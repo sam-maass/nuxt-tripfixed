@@ -37,7 +37,7 @@
         >&#11044;</div>
       </div>
 
-      <a :href="appUrl+'/deals'>
+      <a :href="appUrl+'/deals'">
         <div class="button button--ghost">Plan your next trip</div>
       </a>
     </div>
