@@ -33,7 +33,8 @@ const config: NuxtConfiguration = {
         id: "UA-93772101-1"
       }
     ]
-  ]
+  ],
+  serverMiddleware: ["~/serverMiddleware/redirects.ts"]
   // Type or Press `Ctrl + Space` for autocompletion
 };
 
